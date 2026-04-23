@@ -7,9 +7,14 @@ import { Component, HostListener } from '@angular/core';
 })
 export class App {
   protected isNavScrolled = false;
+  protected currentMiniSlide = 0;
 
   @HostListener('window:scroll')
   onWindowScroll(): void {
     this.isNavScrolled = window.scrollY > 120;
+  }
+
+  goToMiniSlide(index: number): void {
+    this.currentMiniSlide = index;
   }
 }

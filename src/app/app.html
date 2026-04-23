@@ -199,6 +199,30 @@
     </div>
   </section>
 
+  <section class="section mini-slider-section">
+    <div class="mini-slider-wrapper">
+      <div class="mini-slider-track" [style.transform]="'translateX(' + (-currentMiniSlide * 100) + '%)'">
+        <article class="mini-slide">
+          <h5>Best Price Guarantee</h5>
+          <p>We compare packages to make sure you always book at the best available rate.</p>
+        </article>
+        <article class="mini-slide">
+          <h5>Top Rated Tours</h5>
+          <p>Choose from highly rated experiences backed by traveler reviews and local insights.</p>
+        </article>
+        <article class="mini-slide">
+          <h5>24/7 Support</h5>
+          <p>Our team is available around the clock to help with bookings, questions, and changes.</p>
+        </article>
+      </div>
+    </div>
+    <div class="mini-slider-dots">
+      <span [class.active]="currentMiniSlide === 0" (click)="goToMiniSlide(0)"></span>
+      <span [class.active]="currentMiniSlide === 1" (click)="goToMiniSlide(1)"></span>
+      <span [class.active]="currentMiniSlide === 2" (click)="goToMiniSlide(2)"></span>
+    </div>
+  </section>
+
   <section class="section challenges-section">
     <div class="challenges-content">
       <p class="section-kicker">Challenges</p>
@@ -213,6 +237,27 @@
   </section>
 
   <footer class="footer">
+    <div class="footer-slider">
+      <div class="footer-slider-track">
+        <article class="footer-slide">
+          <h5>Explore More</h5>
+          <p>Discover curated tours with local guides and exclusive experiences.</p>
+        </article>
+        <article class="footer-slide">
+          <h5>Get Inspired</h5>
+          <p>Browse travel stories, tips, and destination guides to plan your next trip.</p>
+        </article>
+        <article class="footer-slide">
+          <h5>Book Today</h5>
+          <p>Secure the best deals on top destinations and enjoy stress-free travel.</p>
+        </article>
+      </div>
+      <div class="footer-slider-dots">
+        <span class="active"></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
     <div>
       <h4>ROAM</h4>
       <p>Designed for inspired travelers and unforgettable journeys.</p>
