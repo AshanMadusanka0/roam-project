@@ -610,26 +610,72 @@ h1 {
   }
 }
 
-.view-more-link {
-  padding: 36px 0 0;
-  text-align: center;
-  background: #ffffff;
+.offer-section {
+  max-width: 100%;
+  padding: 80px 20px;
+  background: linear-gradient(rgba(240, 125, 34, 0.86), rgba(240, 125, 34, 0.86)),
+    url("https://images.unsplash.com/photo-1491553895911-0055eca6402d?auto=format&fit=crop&w=1900&q=80")
+      center / cover no-repeat;
+  color: #ffffff;
 }
 
-.view-more {
-  display: inline-block;
+.offer-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(220px, 1fr) minmax(320px, 1.4fr);
+  gap: 40px;
+  align-items: center;
+}
+
+.offer-percent {
+  font-size: clamp(120px, 15vw, 220px);
+  font-weight: 800;
+  line-height: 0.8;
+}
+
+.offer-percent::after {
+  content: "OFF";
+  display: block;
+  font-size: clamp(36px, 4vw, 60px);
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  margin-top: -12px;
+}
+
+.offer-copy h2 {
+  margin: 0 0 24px;
+  font-size: clamp(34px, 4vw, 54px);
+  line-height: 1.05;
+}
+
+.offer-subtitle {
+  margin: 0 0 16px;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.offer-text {
+  margin: 0 0 32px;
+  max-width: 620px;
+  font-size: 16px;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.offer-btn {
+  background: #ffffff;
   color: #f07d22;
+  border: 0;
+  padding: 16px 34px;
+  font-size: 14px;
+  font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1px;
-  font-size: 13px;
-  font-weight: 700;
-  text-decoration: none;
-  border-bottom: 1px solid transparent;
-  transition: border-color 0.2s ease;
-}
-
-.view-more:hover {
-  border-bottom-color: #f07d22;
+  cursor: pointer;
+  border-radius: 8px;
 }
 
 .challenges-section {
@@ -806,6 +852,29 @@ h1 {
     grid-row: 1 / span 2;
   }
 
+  .offer-inner {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .offer-percent {
+    font-size: clamp(80px, 15vw, 180px);
+    margin: 0 auto;
+  }
+
+  .offer-percent::after {
+    font-size: clamp(24px, 5vw, 48px);
+  }
+
+  .offer-copy h2 {
+    font-size: clamp(28px, 6vw, 40px);
+  }
+
+  .offer-text {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   .challenges-section {
     min-height: 380px;
   }
@@ -864,6 +933,24 @@ h1 {
 
   .map-section {
     padding: 56px 14px;
+  }
+
+  .offer-inner {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .offer-percent {
+    font-size: clamp(80px, 15vw, 160px);
+    margin: 0 auto;
+  }
+
+  .offer-copy h2 {
+    font-size: clamp(28px, 6vw, 36px);
+  }
+
+  .offer-btn {
+    margin: 0 auto;
   }
 
   .challenges-section {
