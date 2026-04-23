@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -6,4 +6,10 @@ import { Component } from '@angular/core';
   styleUrl: './app.scss'
 })
 export class App {
+  protected isNavScrolled = false;
+
+  @HostListener('window:scroll')
+  onWindowScroll(): void {
+    this.isNavScrolled = window.scrollY > 120;
+  }
 }
