@@ -695,23 +695,22 @@ h1 {
   }
 
   .mini-slider-track {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 0;
-    padding: 0;
-    height: 100%;
+    display: flex;
+    width: 300%;
     transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    height: 100%;
   }
 
   .mini-slide {
     background: #ffffff;
-    border-radius: 0;
+    border-radius: 24px;
     padding: 2rem;
+    flex: 0 0 100%;
     min-height: 280px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    box-shadow: none;
+    justify-content: center;
+    box-shadow: 0 12px 35px rgba(37, 41, 52, 0.08);
   }
 
   .mini-slide h5 {
