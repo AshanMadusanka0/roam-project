@@ -101,29 +101,40 @@
   </section>
 
   <section class="section map-section">
+    <p class="section-kicker">Modern & Beautiful</p>
     <h2>Explore the World For Yourself</h2>
-    <div class="map-container">
-      <img class="map-image" src="https://images.unsplash.com/photo-1524661135-423995f22d0b?auto=format&fit=crop&w=1400&q=80" alt="World map destinations" />
+    <div class="map-wrapper">
+      <img class="map-image" src="https://roam.qodeinteractive.com/wp-content/uploads/2017/08/h1-img-1.png" alt="World map destinations" />
       <div class="map-overlay">
         <article class="map-card card-1">
-          <p class="card-label">South America</p>
-          <h3>Discover Culture</h3>
-        </article>
-        <article class="map-card card-2">
+          <span class="card-icon">×</span>
           <p class="card-label">North America</p>
           <h3>Discover Culture</h3>
+          <p>Explore iconic landmarks and vibrant cities across the continent.</p>
+        </article>
+        <article class="map-card card-2">
+          <span class="card-icon">×</span>
+          <p class="card-label">European Continent</p>
+          <h3>Discover Culture</h3>
+          <p>Experience timeless architecture, charming streets, and local traditions.</p>
         </article>
         <article class="map-card card-3">
-          <p class="card-label">Europe</p>
+          <span class="card-icon">×</span>
+          <p class="card-label">Asian Continent</p>
           <h3>Discover Culture</h3>
+          <p>Connect with rich heritage, legendary cuisine, and vibrant festivals.</p>
         </article>
         <article class="map-card card-4">
-          <p class="card-label">Asia</p>
+          <span class="card-icon">×</span>
+          <p class="card-label">South America</p>
           <h3>Discover Culture</h3>
+          <p>Follow the rhythm of rainforests, beaches, and colorful celebrations.</p>
         </article>
         <article class="map-card card-5">
-          <p class="card-label">Australia</p>
+          <span class="card-icon">×</span>
+          <p class="card-label">Australian Continent</p>
           <h3>Discover Culture</h3>
+          <p>Find coastal escapes, unique wildlife, and unforgettable landscapes.</p>
         </article>
       </div>
     </div>
@@ -224,14 +235,32 @@
   </section>
 
   <section class="section challenges-section">
-    <div class="challenges-content">
-      <p class="section-kicker">Challenges</p>
-      <h2>The best way to get to know the place you are traveling in is to walk around… and the best way to walk around is with comfortable shoes! Grab your travel buddy and go explore!</h2>
-      <p class="quote-author">Laura Marano, actress</p>
+    <div class="challenges-background"></div>
+    <div class="challenges-overlay"></div>
+    <div class="challenges-inner">
+      <div class="challenge-slider">
+        <div class="challenge-track" [style.transform]="'translateX(' + (-currentChallengeSlide * 100) + '%)'">
+          <article class="challenge-slide">
+            <p class="section-kicker">Challenges</p>
+            <h2>The best way to get to know the place you are traveling in is to walk around… and the best way to walk around is with comfortable shoes! Grab your travel buddy and go explore!</h2>
+            <p class="quote-author">Laura Marano, actress</p>
+          </article>
+          <article class="challenge-slide">
+            <p class="section-kicker">Tourist VS Traveler</p>
+            <h2>The traveler was active; he went strenuously in search of people, of adventure, of experience. The tourist is passive; he expects interesting things to happen to him.</h2>
+            <p class="quote-author">Daniel J. Boorstin, historian</p>
+          </article>
+          <article class="challenge-slide">
+            <p class="section-kicker">Research</p>
+            <h2>I'm passionate and I travel the world not just as a tourist but to understand cultures. I've lived with Masai tribe. I travel the world and bring it back in the form of a research book.</h2>
+            <p class="quote-author">John Galliano, fashion designer</p>
+          </article>
+        </div>
+      </div>
       <div class="dots-indicator">
-        <span></span>
-        <span class="active"></span>
-        <span></span>
+        <button type="button" [class.active]="currentChallengeSlide === 0" (click)="goToChallengeSlide(0)"></button>
+        <button type="button" [class.active]="currentChallengeSlide === 1" (click)="goToChallengeSlide(1)"></button>
+        <button type="button" [class.active]="currentChallengeSlide === 2" (click)="goToChallengeSlide(2)"></button>
       </div>
     </div>
   </section>

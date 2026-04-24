@@ -8,6 +8,7 @@ import { Component, HostListener } from '@angular/core';
 export class App {
   protected isNavScrolled = false;
   protected currentMiniSlide = 0;
+  protected currentChallengeSlide = 0;
 
   @HostListener('window:scroll')
   onWindowScroll(): void {
@@ -16,5 +17,9 @@ export class App {
 
   goToMiniSlide(index: number): void {
     this.currentMiniSlide = index;
+  }
+
+  goToChallengeSlide(index: number): void {
+    this.currentChallengeSlide = index;
   }
 }
